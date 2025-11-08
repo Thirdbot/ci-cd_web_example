@@ -24,7 +24,7 @@ jobs:
 
     - name: install web app dependencies
       working-directory: web-app/vite-project
-      run: npm ci
+      run: npm install
     
     - name: build web app
       working-directory: web-app/vite-project
