@@ -23,22 +23,22 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: install web app dependencies
-      working-directory: ./web-app
+      working-directory: web-app
       run: npm ci
     
     - name: build web app
-      working-directory: ./web-app
+      working-directory: web-app
       run: npm run build
     
     - name: install AWS CDK
       run: sudo npm i -g aws-cdk
     
     - name: cdk synth
-      working-directory: ./CICD_WEB
+      # working-directory: ./CICD_WEB
       run: cdk synth
 
     - name: cdk deploy
-      working-directory: ./CICD_WEB
+      # working-directory: ./CICD_WEB
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
