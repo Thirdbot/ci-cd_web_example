@@ -28,7 +28,7 @@ jobs:
     
     - name: build web app
       # working-directory: web-app/vite-project
-      run: vite build
+      run: npm run build
     
     - name: install AWS CDK
       run: sudo npm i -g aws-cdk
