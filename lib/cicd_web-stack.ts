@@ -13,7 +13,7 @@ export class CicdWebStack extends cdk.Stack {
     super(scope, id, props);
 
     const deployment_bucket = new Bucket(this,'WebBucket',{removalPolicy: cdk.RemovalPolicy.DESTROY});
-    const destination_web = join(__dirname,'..','webapp','vite-project','dist');
+    const destination_web = join(__dirname,'..','webapp','vite-project','build');
 
     if (!existsSync(destination_web)) {
       console.warn(`Warning: The directory ${destination_web} does not exist. Make sure the web application is built before deploying the stack.`);
