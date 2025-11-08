@@ -27,7 +27,7 @@ jobs:
       run: npm ci
     
     - name: build web app
-      working-directory: webapp
+      working-directory: webapp/src
       run: npm run build
     
     - name: install AWS CDK
