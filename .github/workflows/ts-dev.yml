@@ -24,7 +24,7 @@ jobs:
 
     - name: install web app dependencies
       working-directory: webapp
-      run: npm install
+      run: npm ci
     
     - name: build web app
       working-directory: webapp
